@@ -51,6 +51,7 @@ public class PostController {
     	PostDto updatePost = postService.updatePost(postDto,id);
     	return new ResponseEntity<PostDto>(updatePost,HttpStatus.OK);
     }
+    //http://localhost:8080/api/post/2
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletePost(@PathVariable("id") long id){
     	postService.deletePost(id);
